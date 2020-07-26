@@ -151,4 +151,6 @@ Once done click 'Add'.
 
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_02.png">
 
-The new survey question should be shown at the bottom.  Once finished click 'Save'.
+The new survey question should be shown at the bottom in the preview section.  Once finished click 'Save'.
+
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_03.png">
