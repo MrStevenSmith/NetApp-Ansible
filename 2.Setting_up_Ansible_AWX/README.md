@@ -2,7 +2,15 @@
 
 ## Initial AWX Setup
 
+During the first exercise we installed Ansible and AWX Tower.  If you have not yet completed this task please follow [Exercise 1](https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/1.Installing_Ansible_and_AWX)
+
+In this exercise we will configure Ansible AWX for basic use and run a simple playbook to create a new volume.
+
 ### 1. Add Credential Type
+
+Firstly we need to create a Credential type to store our ONTAP credentials.
+
+To do this click on the left hand link 'Credential Type' and click the green plus sign.
 
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_01.png">
 
