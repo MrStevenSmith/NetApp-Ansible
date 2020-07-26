@@ -13,11 +13,14 @@ yum update -y
 # Install Dependancies
 dnf makecache
 dnf install epel-release -y
-dnf install git gcc gcc-c++ nodejs gettext device-mapper-persistent-data lvm2 bzip2 python3-pip ansible -y
+dnf install nano git gcc gcc-c++ nodejs gettext device-mapper-persistent-data lvm2 bzip2 python3-pip ansible -y
 alternatives --set python /usr/bin/python3
+pip3 install netapp-lib solidfire-sdk-python requests
+ansible-galaxy collection install netapp.ontap netapp.elementsw -p /usr/share/ansible/collections
+chmod +rx /usr/share/ansible/collections
 
 # Open firewall ports
-sed -i 's/SELINUX*/SELINUX=disabled/' /etc/sysconfig/selinux
+sed -i '/^SELINUX=/c\SELINUX=disabled' /etc/sysconfig/selinux
 firewall-cmd --zone=public --add-masquerade --permanent
 firewall-cmd --permanent --add-service=http
 firewall-cmd --permanent --add-service=https
@@ -38,15 +41,14 @@ pip3 install docker-compose
 cd ~
 git clone https://github.com/ansible/awx.git
 cd awx/installer/
-sed -i 's/SELINUX*/SELINUX=disabled/' /etc/selinux/config
-sed -i 's/postgres_data_dir*/postgres_data_dir=/var/lib/pgdocker/' /home/$USER/awx/installer/inventory
-sed -i 's/awx_official*/awx_official=true' /home/$USER/awx/installer/inventory
-sed -i 's/project_data_dir*/project_data_dir=/var/lib/awx/projects' /home/$USER/awx/installer/inventory
-sed -i 's/awx_alternate_dns_servers*/' /home/$USER/awx/installer/inventory
-sed -i 's/awx_alternate_dns_servers*/awx_alternate_dns_servers="4.2.2.1,4.2.2.2"' /home/$USER/awx/installer/inventory
-sed -i 's/pg_admin_password=*/pg_admin_password=postgrespass@123' /home/$USER/awx/installer/inventory
+sed -i '/^postgres_data_dir=/c\postgres_data_dir=/var/lib/pgdocker/' ~/awx/installer/inventory
+sed -i '/project_data_dir=/s/^#//g' ~/awx/installer/inventory
+sed -i '/^project_data_dir=/c\project_data_dir=/var/lib/awx/projects' ~/awx/installer/inventory
+sed -i '/awx_alternate_dns_servers=/s/^#//g' ~/awx/installer/inventory
+sed -i '/^awx_alternate_dns_servers=/c\awx_alternate_dns_servers="4.2.2.1,4.2.2.2"' ~/awx/installer/inventory
+sed -i '/^pg_password=/c\pg_password=postgrespass@123' ~/awx/installer/inventory
 SCK=$(openssl rand -base64 30)
-sed -i "s|secret_key|secret_key=${SCK}|" /home/$USER/awx/installer/inventory
+sed -i "/^secret_key=/c\secret_key=${SCK}" ~/awx/installer/inventory
 
 #nano inventory
 ## localhost ansible_connection=local ansible_python_interpreter="/usr/bin/env python3"
