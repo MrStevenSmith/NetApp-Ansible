@@ -26,7 +26,13 @@ Injector Configuration:
     netapp_password: '{{ netapp_password }}'
 ```
 
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_02.png">
+
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_03.png">
+
 ### 2. Add Credential
+
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_01.png">
 
 ```
 Name: Cluster Admin
@@ -36,7 +42,13 @@ Username: admin
 Password: Netapp1!
 ```
 
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_02.png">
+
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_03.png">
+
 ### 3. Project
+
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/project_01.png">
 
 ```
 Name: NetApp Workflow
@@ -46,7 +58,13 @@ SCM Update Options: Update Revision on Launch
 Cache Timeout: 1800
 ```
 
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/project_02.png">
+
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/project_03.png">
+
 ### 4. Job Template
+
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/template_01.png">
 
 ```
 Name: volume_create  ## lowercase and 1 word for rest calls
@@ -60,7 +78,11 @@ Credentials: Cluster Admin (from ONTAP)
 
 Save
 
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/template_02.png">
+
 ### 5. Add Survey
+
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_01.png">
 
 ```
 Prompt 1: What Aggregate should this Volume go on?
@@ -72,3 +94,5 @@ Required 1: Text
 Add
 
 Save
+
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_02.png">
