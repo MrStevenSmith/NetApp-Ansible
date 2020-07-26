@@ -30,3 +30,9 @@ Password: Netapp1!
 
 3. Project
 
+Name: NetApp Workflow
+SCM Type: Git
+SCM URL: https://github.com/MrStevenSmith/NetApp-Ansible
+SCM Update Options: Update Revision on Launch
+Cache Timeout: 1800
+
