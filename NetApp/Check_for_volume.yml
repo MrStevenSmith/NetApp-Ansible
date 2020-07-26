@@ -1,0 +1,31 @@
+# Check for volume
+
+---
+- hosts: all
+  gather_facts: no
+  vars:
+    your_vserver: "VSERVER"
+    vol_name: "VOLUME"
+  tasks:
+  - block:
+    - name: Gather some info
+      na_ontap_info:
+        state: info
+        hostname: "{{ inventory_hostname }}"
+        username: "{{ ansible_username }}"
+        password: "{{ ansible_password }}"
+        gather_subset:
+          - volume_info
+        https: true
+        validate_certs: false
+      register: output
+    - set_fact:
+        vol_tuple: "{{ vol_name }}:{{ your_vserver }}"
+    - debug:
+        msg: "Not relevant"
+      failed_when:  vol_tuple in output.ontap_info.volume_info.keys()
+    - debug:
+        msg: "Volume name '{{ vol_name }}' is not present"
+    rescue:
+     - debug:
+         msg: "Volume name '{{ vol_name }}' already exist on this cluster
