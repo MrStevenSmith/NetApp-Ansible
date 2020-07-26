@@ -43,5 +43,18 @@ Description: Volume Creation Module
 Job Type: Run
 Inventory: Demo Inventory
 Project: NetApp WorkFlow
-Playbook: create_volume.yml
+Playbook: ansible-playbooks/create_volume.yml
+Credentials: Cluster Admin (from ONTAP)
 
+Save
+
+5. Add Survey
+
+Prompt 1: What Aggregate should this Volume go on?
+Answer Variable Name 1: aggrname
+Answer Type 1: String
+Required 1: Text
+
+Add
+
+Save
