@@ -8,11 +8,13 @@ In this exercise we will configure Ansible AWX for basic use and run a simple pl
 
 ### 1. Add Credential Type
 
-Firstly we need to create a Credential type to store our ONTAP credentials.
+Firstly we need to create a Credential type to store our ONTAP credentials.  A credential type defines what variables we are going to use when creating our credentials, which in this case is the ONTAP username and password.
 
-To do this click on the left hand link 'Credential Type' and click the green plus sign.
+To do this click on the left hand link 'Credential Types' and click the green plus sign.
 
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_01.png">
+
+We must now create our new credential type.  Fill in the fields listed below.
 
 ```
 Name: ONTAP
@@ -36,11 +38,19 @@ Injector Configuration:
 
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_02.png">
 
+Once complete click on 'Save' and you should now see you new credential type.
+
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_03.png">
 
 ### 2. Add Credential
 
+Now that we have created our Credential type we can add our credential.  For this exercise we are just going to add the cluster admin account, however in production we would normally create a service account and use that for authentication on the ONTAP system.
+
+Click the link 'Credentials' on the left and click the green plus sign.
+
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_01.png">
+
+For our new credential fill out the fields listed below.
 
 ```
 Name: Cluster Admin
@@ -51,6 +61,8 @@ Password: Netapp1!
 ```
 
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_02.png">
+
+Once complete click on 'Save' and you should now see you new credential.
 
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_03.png">
 
