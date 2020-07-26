@@ -9,9 +9,9 @@ yum update -y
 
 # Install Dependancies
 yum makecache
-rpm --import http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
+#rpm --import http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
 yum install epel-release -y
-yum install nano git gcc gcc-c++ nodejs gettext device-mapper-persistent-data lvm2 bzip2 python3-pip ansible -y
+yum install nano git gcc gcc-c++ yum-utils nodejs gettext libselinux-python libselinux-python3 device-mapper-persistent-data lvm2 bzip2 python3-pip ansible -y
 alternatives --set python /usr/bin/python3
 pip3 install netapp-lib solidfire-sdk-python requests
 ansible-galaxy collection install netapp.ontap netapp.elementsw -p /usr/share/ansible/collections
@@ -25,8 +25,8 @@ firewall-cmd --permanent --add-service=https
 firewall-cmd --reload
 
 # Install docker-ce
-dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
-dnf install docker-ce-3:18.09.1-3.el7 -y
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum install docker-ce-18.09.1 docker-ce-cli-18.09.1 containerd.io
 systemctl start docker
 systemctl enable --now docker.service
 usermod -aG docker $USER
