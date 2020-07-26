@@ -36,3 +36,12 @@ SCM URL: https://github.com/MrStevenSmith/NetApp-Ansible
 SCM Update Options: Update Revision on Launch
 Cache Timeout: 1800
 
+4. Job Template
+
+Name: volume_create  ## lowercase and 1 word for rest calls
+Description: Volume Creation Module
+Job Type: Run
+Inventory: Demo Inventory
+Project: NetApp WorkFlow
+Playbook: create_volume.yml
+
