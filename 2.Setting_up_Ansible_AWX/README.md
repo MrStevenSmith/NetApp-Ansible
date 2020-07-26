@@ -110,7 +110,7 @@ When we call the job template we want it to run and create a new volume, rather 
 
 We also need to select an Inventory.  The NetApp modules do not use inventories the same way as most other managed nodes, so in our case we can choose the Demo Inventory, which only has localhost mapped.
 
-We also need to select our playbook.  You should be able to select 'ansible-playbooks/create_volume.yml' from the drop down list.
+Next we must select our playbook.  You should be able to select 'ansible-playbooks/create_volume.yml' from the drop down list.
 
 Finally we need some credentials to authenticate against the ONTAP system.  So select 'Cluster Admin' from our ONTAP credentials.
 
@@ -147,8 +147,8 @@ Answer Type 1: String
 Required 1: Text
 ```
 
+Once done click 'Add'.
+
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_02.png">
 
-Once done click 'Add' and the new survey question should be shown at the bottom.
-
-Once finished click 'Save'.
+The new survey question should be shown at the bottom.  Once finished click 'Save'.
