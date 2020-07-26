@@ -1,4 +1,4 @@
-# Setting up Ansible AWX for use
+# Exercise 2 - Setting up Ansible AWX for use
 
 ## Initial AWX Setup
 
@@ -129,28 +129,3 @@ Credentials: Cluster Admin (from ONTAP)
 Once done click 'Save' but do not close the job template.
 
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/template_02.png">
-
-### 5. Add Survey
-
-We could hard code the aggregate name which we want the volume to be created on, however this makes the script very static.  We will instead use a variable to get the aggregate name.  To get this variable we need to create a survey.
-
-To do this click on the 'Survey' button at the top of our job template.
-
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_01.png">
-
-We are now going to add our question.  Fill out the fileds listed below.
-
-```
-Prompt 1: What Aggregate should this Volume go on?
-Answer Variable Name 1: aggrname
-Answer Type 1: String
-Required 1: Text
-```
-
-Once done click 'Add'.
-
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_02.png">
-
-The new survey question should be shown at the bottom in the preview section.  Once finished click 'Save'.
-
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_03.png">
