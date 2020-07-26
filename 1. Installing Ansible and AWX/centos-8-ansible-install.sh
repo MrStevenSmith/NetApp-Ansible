@@ -4,6 +4,7 @@ https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/1.%20Installing%20An
 # Steven Smith
 
 # Update OS and packages
+echo Update OS and packages
 yum update -y kernel
 yum update -y
 
@@ -11,6 +12,7 @@ yum update -y
 # init 6
 
 # Install Dependancies
+echo Install Dependancies
 dnf makecache
 dnf install epel-release -y
 dnf install nano git gcc gcc-c++ nodejs gettext device-mapper-persistent-data lvm2 bzip2 python3-pip ansible -y
@@ -20,6 +22,7 @@ ansible-galaxy collection install netapp.ontap netapp.elementsw -p /usr/share/an
 chmod +rx /usr/share/ansible/collections
 
 # Open firewall ports
+echo Open firewall ports
 sed -i '/^SELINUX=/c\SELINUX=disabled' /etc/sysconfig/selinux
 firewall-cmd --zone=public --add-masquerade --permanent
 firewall-cmd --permanent --add-service=http
@@ -27,6 +30,7 @@ firewall-cmd --permanent --add-service=https
 firewall-cmd --reload
 
 # Install docker-ce
+echo Install docker-ce
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 dnf install docker-ce-3:18.09.1-3.el7 -y
 systemctl start docker
@@ -35,9 +39,11 @@ usermod -aG docker $USER
 # init 6
 
 # Install Docker-Compose
+echo Install Docker-Compose
 pip3 install docker-compose
 
 # Modify AWX Inverory File
+echo Modify AWX Inverory File
 cd ~
 git clone https://github.com/ansible/awx.git
 cd awx/installer/
@@ -61,11 +67,13 @@ sed -i "/^secret_key=/c\secret_key=${SCK}" ~/awx/installer/inventory
 ## secret_key=<output of below>
 ## openssl rand -base64 30
 
-
+# Install AWX
+echo Install AWX
 ansible-playbook -i inventory install.yml
 
 
 # Modify AWX for NetApp
+echo Modify AWX for NetApp
 docker exec -it awx_task pip3 install netapp-lib requests solidfire-sdk-python
 docker exec -it awx_task yum remove ansible -y
 docker exec -it awx_task pip3 install ansible
