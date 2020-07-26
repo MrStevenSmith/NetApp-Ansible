@@ -73,6 +73,7 @@ ansible-playbook -i inventory install.yml
 
 
 # Modify AWX for NetApp
+sleep 2m
 echo Modify AWX for NetApp
 docker exec -it awx_task pip3 install netapp-lib requests solidfire-sdk-python
 docker exec -it awx_task yum remove ansible -y
