@@ -98,12 +98,24 @@ When the button on the right of the project is green this shows that the source 
 
 ### 4. Job Template
 
-Now that we have 
+Now that we have our source files we are going to use one of them to create a job template that we can run every time we need to create a new volume.
+
+Click on 'Templates' on the left and then click the green plus sign and select 'Job Template'.
 
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/template_01.png">
 
+We can now fill out the details to create our new job template.
+
+When we call the job template we want it to run and create a new volume, rather than check if the volume is there so on the template we need to select 'Run'.
+
+We also need to select an Inventory.  The NetApp modules do not use inventories the same way as most other managed nodes, so in our case we can choose the Demo Inventory, which only has localhost mapped.
+
+We also need to select our playbook.  You should be able to select 'ansible-playbooks/create_volume.yml' from the drop down list.
+
+Finally we need some credentials to authenticate against the ONTAP system.  So select 'Cluster Admin' from our ONTAP credentials.
+
 ```
-Name: volume_create  ## lowercase and 1 word for rest calls
+Name: volume_create
 Description: Volume Creation Module
 Job Type: Run
 Inventory: Demo Inventory
@@ -112,13 +124,21 @@ Playbook: ansible-playbooks/create_volume.yml
 Credentials: Cluster Admin (from ONTAP)
 ```
 
-Save
+* Note: The job template name has been written in lower case letters and has no spaces to ease being able to call the playbook using Rest API calls.
+
+Once done click 'Save' but do not close the job template.
 
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/template_02.png">
 
 ### 5. Add Survey
 
+We could hard code the aggregate name which we want the volume to be created on, however this makes the script very static.  We will instead use a variable to get the aggregate name.  To get this variable we need to create a survey.
+
+To do this click on the 'Survey' button at the top of our job template.
+
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_01.png">
+
+We are now going to add our question.  Fill out the fileds listed below.
 
 ```
 Prompt 1: What Aggregate should this Volume go on?
@@ -127,8 +147,8 @@ Answer Type 1: String
 Required 1: Text
 ```
 
-Add
-
-Save
-
 <img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_02.png">
+
+Once done click 'Add' and the new survey question should be shown at the bottom.
+
+Once finished click 'Save'.
