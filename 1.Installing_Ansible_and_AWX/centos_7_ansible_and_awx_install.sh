@@ -26,7 +26,7 @@ firewall-cmd --reload
 
 # Install docker-ce
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-yum install docker-ce-18.09.1 docker-ce-cli-18.09.1 containerd.io
+yum install docker-ce-18.09.1 docker-ce-cli-18.09.1 containerd.io -y
 systemctl start docker
 systemctl enable --now docker.service
 usermod -aG docker $USER
