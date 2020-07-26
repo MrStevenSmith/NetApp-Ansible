@@ -8,9 +8,10 @@ yum update -y kernel
 yum update -y
 
 # Install Dependancies
-dnf makecache
-dnf install epel-release -y
-dnf install nano git gcc gcc-c++ nodejs gettext device-mapper-persistent-data lvm2 bzip2 python3-pip ansible -y
+yum makecache
+rpm --import http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
+yum install epel-release -y
+yum install nano git gcc gcc-c++ nodejs gettext device-mapper-persistent-data lvm2 bzip2 python3-pip ansible -y
 alternatives --set python /usr/bin/python3
 pip3 install netapp-lib solidfire-sdk-python requests
 ansible-galaxy collection install netapp.ontap netapp.elementsw -p /usr/share/ansible/collections
