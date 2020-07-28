@@ -79,4 +79,5 @@ Once complete if you open a browser and navigate to http://192.168.0.69/#/login 
 <img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/1.Installing_Ansible_and_AWX/images/1st_load.png">
 </div>
   
+  
 Once you can see the AWX is Upgrading screen you can move onto [Exercise 2](https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/2.Setting_up_Ansible_AWX)
