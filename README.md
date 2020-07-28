@@ -1,11 +1,11 @@
-<p align="center">
+<div align="center">
 <img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/images/awx_logo.png">
-</p>
+</div>
 
 
-<p align="center">
+<div align="center">
 <img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/images/ansible_logo.png">
-</p>
+</div>
 
 
 # NetApp Ansible Practical Exercises
