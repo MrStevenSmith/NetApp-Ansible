@@ -10,7 +10,7 @@ To carry out this exercise you will need access to some Linux VM's.  You will al
 
 For NetApp employees and partners who have access to [NetApp LabOnDemand](https://labondemand.netapp.com/) this exercise can be carried out using the [Using Trident with Kubernetes and ONTAP v3.1](https://labondemand.netapp.com/lab/sl10556) lab.
 
-We will be using a script to install Ansible and AWX onto our control VM, however scripts have been provided to install ansible and AWX onto both a vanilla CentOS 7 or CentOS 8 installation.
+We will be using a script to install Ansible and AWX onto our control VM, however scripts have been provided to install Ansible and AWX onto both a vanilla CentOS 7 or CentOS 8 installation.
 
 ## Install Asnible and AWX
 
@@ -21,7 +21,7 @@ Firstly open PuTTY and ssh into the VM rhel6.
 <div align="center">
 <img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/1.Installing_Ansible_and_AWX/images/putty.png">
 </div>
-
+  
 We can now log in.  Use the credentials: -  
 Username: root  
 Password: Netapp1!
@@ -78,5 +78,5 @@ Once complete if you open a browser and navigate to http://192.168.0.69/#/login 
 <div align="center">
 <img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/1.Installing_Ansible_and_AWX/images/1st_load.png">
 </div>
-
+  
 Once you can see the AWX is Upgrading screen you can move onto [Exercise 2](https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/2.Setting_up_Ansible_AWX)
