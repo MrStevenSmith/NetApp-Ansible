@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/1.Installing_Ansible_and_AWX/lod_sl10556_ansible_and_awx_install.sh
+# https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/exercise_01/lod_sl10556_ansible_and_awx_install.sh
 # Steven Smith
 
 # Install Dependancies

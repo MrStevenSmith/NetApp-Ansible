@@ -2,7 +2,7 @@
 
 ## Initial AWX Setup
 
-During the first exercise we installed Ansible and AWX Tower.  If you have not yet completed this task please follow [Exercise 1](https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/1.Installing_Ansible_and_AWX)
+During the first exercise we installed Ansible and AWX Tower.  If you have not yet completed this task please follow [Exercise 1](https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/exercise_01)
 
 In this exercise we will configure Ansible AWX for basic use and run a simple playbook to create a new volume.
 
@@ -13,7 +13,7 @@ Firstly we need to create a Credential type to store our ONTAP credentials.  A c
 To do this click on the left hand link 'Credential Types' and click the green plus sign.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_01.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/credential_type_01.png">
 </div>
 
 We must now create our new credential type.  Fill in the fields listed below.
@@ -39,13 +39,13 @@ extra_vars:
 ```
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_02.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/credential_type_02.png">
 </div>
 
 Once complete click on 'Save' and you should now see your new credential type.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_03.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/credential_type_03.png">
 </div>
 
 ### 2. Add a new Credential
@@ -55,7 +55,7 @@ Now that we have created our Credential type we can add our credential.  For thi
 Click the link 'Credentials' on the left and click the green plus sign.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_01.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/credential_01.png">
 </div>
 
 For our new credential fill out the fields listed below.
@@ -71,13 +71,13 @@ Password: Netapp1!
 * Note: the details above are correct for the ONTAP cluster in the LabOnDemand.  If you are using a different system then you will need to change the details above as appropriate.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_02.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/credential_02.png">
 </div>
 
 Once complete click on 'Save' and you should now see your new credential.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_03.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/credential_03.png">
 </div>
 
 ### 3. Create a new Project
@@ -89,7 +89,7 @@ We will configure our project to update our source files at launch to ensure we 
 To create our new project click on 'Projects' on the left hand side and click the green plus sign.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/project_01.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/project_01.png">
 </div>
 
 Fill out the below fields to configure our Project.
@@ -103,13 +103,13 @@ Cache Timeout: 1800
 ```
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/project_02.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/project_02.png">
 </div>
 
 Once complete click on 'Save' and you should now see your new project.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/project_03.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/project_03.png">
 </div>
 
 When the button on the right of the project is green this shows that the source code has been downloaded.  If you wish to manually refresh the source code you can click on the cycle button to the right of the project.
@@ -121,7 +121,7 @@ Now that we have our source files we are going to use one of them to create a jo
 Click on 'Templates' on the left and then click the green plus sign and select 'Job Template'.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/template_01.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/template_01.png">
 </div>
 
 We can now fill out the details to create our new job template.
@@ -149,5 +149,5 @@ Credentials: Cluster Admin (from ONTAP)
 Once done click 'Save' but do not close the job template.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/template_02.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_03/images/template_02.png">
 </div>

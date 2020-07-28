@@ -19,7 +19,7 @@ Once you have created your LabOnDemand environment and connected we can start ou
 Firstly open PuTTY and ssh into the VM rhel6.
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/1.Installing_Ansible_and_AWX/images/putty.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_01/images/putty.png">
 </div>
 
 We can now log in.  Use the credentials: -  
@@ -76,9 +76,9 @@ The installation process should normally take around 5-10 minutes.
 Once complete if you open a browser and navigate to http://192.168.0.69/#/login you should see the AWX is Upgrading screen. (It may take 5 minutes after the script has finished before all of the services are up and running)
 
 <div align="center">
-<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/1.Installing_Ansible_and_AWX/images/1st_load.png">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/exercise_01/images/1st_load.png">
 </div>
 
-Once you can see the AWX is Upgrading screen you can move onto [Exercise 2](https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/2.Setting_up_Ansible_AWX)  
+Once you can see the AWX is Upgrading screen you can move onto [Exercise 2](https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/exercise_02)  
 
 [Home](https://github.com/MrStevenSmith/NetApp-Ansible)
