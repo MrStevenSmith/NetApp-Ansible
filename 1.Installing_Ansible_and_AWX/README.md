@@ -6,11 +6,11 @@ In this exercise we will run a script to install Ansible and AWX onto our contro
 
 ### Exercise Requirements
 
-During this exercise we will use a NetApp LabOnDemand to provide our linux VM's and our ONTAP system.
-
 To carry out this exercise you will need access to some Linux VM's.  You will also need access to a NetApp ONTAP based storage system.
 
 For NetApp employees and partners who have access to [NetApp LabOnDemand](https://labondemand.netapp.com/) this exercise can be carried out using the [Using Trident with Kubernetes and ONTAP v3.1](https://labondemand.netapp.com/lab/sl10556) lab.
+
+We will be using a script to install Ansible and AWX onto our control VM, however scripts have been provided to install ansible and AWX onto both a vanilla CentOS 7 or CentOS 8 installation.
 
 ## Install Asnible and AWX
 
