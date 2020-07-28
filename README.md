@@ -1,7 +1,11 @@
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/images/awx_logo.png">
+<p align="center">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/images/awx_logo.png">
+</p>
 
 
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/images/ansible_logo.png">
+<p align="center">
+<img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/images/ansible_logo.png">
+</p>
 
 
 # NetApp Ansible Practical Exercises
