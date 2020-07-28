@@ -14,7 +14,9 @@ We could hard code the aggregate name which we want the volume to be created on,
 
 To do this click on the 'Survey' button at the top of our job template.
 
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_01.png">
+<p align="center">
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/3.Using_variables_in_our_playbooks/images/survey_01.png">
+<p>
 
 We are now going to add our question.  Fill out the fileds listed below.
 
@@ -27,8 +29,12 @@ Required 1: Text
 
 Once done click 'Add'.
 
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_02.png">
+<p align="center">
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/3.Using_variables_in_our_playbooks/images/survey_02.png">
+</p>
 
 The new survey question should be shown at the bottom in the preview section.  Once finished click 'Save'.
 
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/survey_03.png">
+<p align="center">
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/3.Using_variables_in_our_playbooks/images/survey_03.png">
+</p>
