@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/1.Installing_Ansible_and_AWX/centos_8_ansible_and_awx_install.sh
+# https://github.com/MrStevenSmith/NetApp-Ansible/tree/master/1.Installing_Ansible_and_AWX/centos_7_ansible_and_awx_install.sh
 # Steven Smith
 
 # Update OS and packages
