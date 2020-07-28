@@ -38,6 +38,7 @@ cd ~
 git clone https://github.com/ansible/awx.git
 cd awx/installer/
 sed -i '/^postgres_data_dir=/c\postgres_data_dir=/var/lib/pgdocker/' ~/awx/installer/inventory
+sed -i '/^docker_compose_dir=/c\docker_compose_dir=/var/lib/awx/awxcompose/' ~/awx/installer/inventory
 sed -i '/project_data_dir=/s/^#//g' ~/awx/installer/inventory
 sed -i '/^project_data_dir=/c\project_data_dir=/var/lib/awx/projects' ~/awx/installer/inventory
 sed -i '/awx_alternate_dns_servers=/s/^#//g' ~/awx/installer/inventory
