@@ -22,8 +22,8 @@ Firstly open PuTTY and ssh into the VM rhel6.
 <img src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/1.Installing_Ansible_and_AWX/images/putty.png">
 </div>
 
-We can now log in.  Use the credentials: -
-Username: root
+We can now log in.  Use the credentials: -  
+Username: root  
 Password: Netapp1!
 
 ```
@@ -71,7 +71,7 @@ epel                                                                            
 
 ```
 
-The installation process should normally take around 10 minutes.
+The installation process should normally take around 5-10 minutes.
 
 Once complete if you open a browser and navigate to http://192.168.0.69/#/login you should see the AWX is Upgrading screen. (It may take 5 minutes after the script has finished before all of the services are up and running)
 
