@@ -1,7 +1,7 @@
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_01.png">
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/images/awx_logo.png">
 
 
-<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/2.Setting_up_Ansible_AWX/images/credential_type_01.png">
+<img align="center" src="https://github.com/MrStevenSmith/NetApp-Ansible/blob/master/images/ansible_logo.png">
 
 
 # NetApp Ansible Practical Exercises
