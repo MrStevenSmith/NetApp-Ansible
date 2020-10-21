@@ -25,7 +25,7 @@ firewall-cmd --reload
 
 # Install docker-ce
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
-dnf install docker-ce-3:18.09.1-3.el7 -y
+dnf install docker-ce -y
 systemctl start docker
 systemctl enable --now docker.service
 usermod -aG docker $USER
